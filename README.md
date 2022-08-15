@@ -17,7 +17,7 @@ its current spot. 'M' means move forward one grid point, and maintain
 the same heading.
 Assume that the square directly North from (x, y) is (x, y+1).
 
-## Input
+### Input
 
 The first line of input is the upper-right coordinates of the
 plateau, the lower-left coordinates are assumed to be 0,0.
@@ -31,16 +31,28 @@ orientation.
 Each rover will be finished sequentially, which means that the second
 rover won't start to move until the first one has finished moving.
 
-## Output
+### Output
 
 The output for each rover should be its final co-ordinates and
 heading.
-## Test Input
+#### Test Input
 5 5
 1 2 N
 LMLMLMLMM
 3 3 E
 MMRMMRMRRM
-## Expected Output
+#### Expected Output
 1 3 N
 5 1 E
+
+## To test
+
+To run open the terminal install the packages with the command:
+
+```npm install```
+
+Em seguida rode o comando de testes:
+
+```npm run test```
+
+Check the tests in the **'./test/MarsRover.test.ts'** file
