@@ -8,5 +8,15 @@ export default class MarsRover {
       this.position = position
       this.direction = direction
     }
+
+    validateCommand(command: string) {
+        const commands = ['M', 'L', 'R']
+        for (let commandIn of commands) {
+          if (commandIn === command) {
+            return
+          }
+        }
+        throw Error('invalid command')
+      }
   
    }
