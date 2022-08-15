@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/lucasbarrosrocha/rover-test#readme",
   "devDependencies": {
+    "@types/jest": "^28.1.7",
+    "jest": "^28.1.3",
+    "ts-jest": "^28.0.8",
     "typescript": "^4.7.4"
   }
 }
