@@ -1,32 +1,33 @@
-import MarsRover from './MarsRover';
-import {Position} from "./Position";
+import MarsRover from "./MarsRover";
+import { Compass } from "./Compass";
+import { Position } from "./Position";
 
 export class Move {
   private rover: MarsRover;
 
   constructor(rover: MarsRover) {
-    this.rover = rover
+    this.rover = rover;
   }
 
   move() {
-    let currentX = this.rover.position.x
-    let currentY = this.rover.position.y
+    let currentX = this.rover.position.x;
+    let currentY = this.rover.position.y;
 
-    if (this.rover.direction === 'N') {
-      currentY++
+    if (this.rover.direction === Compass.NORTH) {
+      currentY++;
     }
-    if (this.rover.direction === 'E') {
-      currentX++
+    if (this.rover.direction === Compass.EAST) {
+      currentX++;
     }
-    if (this.rover.direction === 'S') {
-      currentY--
+    if (this.rover.direction === Compass.SOUTH) {
+      currentY--;
     }
-    if (this.rover.direction === 'W') {
-      currentX--
+    if (this.rover.direction === Compass.WEST) {
+      currentX--;
     }
 
-    const { x, y } = this.nextPosition(currentX, currentY)
-    this.rover.position  = new Position(x,y)
+    const { x, y } = this.nextPosition(currentX, currentY);
+    this.rover.position = new Position(x, y);
   }
 
   private nextPosition(x: number, y: number): Position {
@@ -46,6 +47,6 @@ export class Move {
       x = 0;
     }
 
-    return { x, y }
+    return { x, y };
   }
 }

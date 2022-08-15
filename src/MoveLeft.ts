@@ -1,28 +1,29 @@
-import MarsRover from './MarsRover';
+import MarsRover from "./MarsRover";
+import { Compass } from "./Compass";
 
 export class MoveLeft {
   private rover: MarsRover;
 
   constructor(rover: MarsRover) {
-    this.rover = rover
+    this.rover = rover;
   }
 
   move() {
-    if (this.rover.direction === 'W') {
-      this.rover.direction = 'S'
-      return
+    if (this.rover.direction === Compass.WEST) {
+      this.rover.direction = Compass.SOUTH;
+      return;
     }
-    if (this.rover.direction === 'N') {
-      this.rover.direction = 'W'
-      return
+    if (this.rover.direction === Compass.NORTH) {
+      this.rover.direction = Compass.WEST;
+      return;
     }
-    if (this.rover.direction === 'E') {
-      this.rover.direction = 'N'
-      return
+    if (this.rover.direction === Compass.EAST) {
+      this.rover.direction = Compass.NORTH;
+      return;
     }
-    if (this.rover.direction === 'S') {
-      this.rover.direction = 'E'
-      return
+    if (this.rover.direction === Compass.SOUTH) {
+      this.rover.direction = Compass.EAST;
+      return;
     }
   }
 }
