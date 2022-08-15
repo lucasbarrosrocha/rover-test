@@ -55,7 +55,7 @@ To run open the terminal install the packages with the command:
 
 ```npm install```
 
-Em seguida rode o comando de testes:
+Then run the test command:
 
 ```npm run test```
 
